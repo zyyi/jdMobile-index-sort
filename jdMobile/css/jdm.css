@@ -1,0 +1,703 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #F7F7F7;
+}
+.jdm {
+    width: 100%;
+    margin: 0 auto;
+    /*padding: 40px 0 44px;*/
+    padding-bottom: 44px;
+}
+
+
+
+/*顶部搜索栏*/
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 100%;
+    height: 40px;
+    background-color: #c91523;
+}
+.jdm-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 56px;
+    height: 21px;
+    background-image: url("../image/jd-sprites.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: 0 -109px;
+}
+.jdm-search {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 75px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+.jdm-search .icon-search {
+    position: absolute;
+    top: 5px;
+    left: 80px;
+    width: 20px;
+    height: 30px;
+    background-image: url("../image/jd-sprites.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: -59px -104px;
+}
+.jdm-search input {
+    width: 100%;
+    height: 30px;
+    padding-left: 30px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+header .jdm-login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+
+/*中间主要内容部分*/
+
+/*轮播图*/
+.carousel {
+    width: 100%;
+
+}
+.carousel li img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/*导航部分*/
+/*导航部分  第一种： 利用浮动*/
+/*.nav {
+    width: 100%;
+    background-color: #fff;
+}
+.nav ul {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.nav li {
+    float: left;
+    width: 25%;
+    padding-bottom: 10px;
+}
+.nav li a {
+    display: block;
+    text-align: center;
+}
+.nav li a span {
+    display: block;
+    margin-top: 5px;
+}
+.nav li a img {
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+}*/
+
+/*导航部分  第二种： 利用flex伸缩布局*/
+.nav {
+    width: 100%;
+    background-color: #fff;
+}
+.nav ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.nav li {
+    /*flex: 1;*/
+    width: 25%;
+    padding-bottom: 10px;
+}
+.nav li a {
+    display: block;
+    text-align: center;
+}
+.nav li a img {
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+}
+.nav li a span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
+/*掌上秒杀*/
+.seckill {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 0 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*掌上秒杀 上半部分*/
+.seckill-top {
+    overflow: hidden;
+    width: 100%;
+    padding: 8px 0;
+}
+.seckill-top h4 {
+    position: relative;
+    float: left;
+    font-size: 15px;
+    color: #c91523;
+    font-weight: normal;
+    padding-left: 22px;
+    margin-right: 5px;
+}
+.seckill-top h4::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 20px;
+    height: 26px;
+    background-image: url("../image/jd-sprites.png");
+    background-size: 200px 200px;
+    background-position: -84px -107px;
+}
+.seckill-top .seckill-time {
+    float: left;
+    font-size: 0px;
+    margin-top: 1px;
+}
+.seckill-top .seckill-time span {
+    font-size: 13px;
+    background-color: #000;
+    color: #fff;
+    padding: 1px 0px;
+}
+.seckill-top .seckill-time span:nth-child(3n) {
+    background-color: #fff;
+    color: #000;
+    margin: 0 3px;
+}
+.seckill-top .seckill-time span:nth-child(3n+1) {
+    padding-left: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.seckill-top .seckill-time span:nth-child(3n+2) {
+    padding-right: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.seckill-top .seckill-more {
+    float: right;
+    font-size: 12px;
+    color: #666;
+    line-height: 15px;
+    padding-right: 10px;
+    position: relative;
+}
+.seckill-top .seckill-more::after {
+    position: absolute;
+    top: 1px;
+    right: 0px;
+    content: "";
+    width: 7px;
+    height: 12px;
+    background-image: url("../image/jd-sprites.png");
+    background-size: 200px 200px;
+    background-position: -186px -51px;
+}
+
+/*掌上秒杀 下半部分*/
+.seckill-bottom {
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.seckill-bottom ul {
+    width: 100%;
+    overflow: hidden;
+}
+.seckill-bottom li {
+    float: left;
+    width: 33.33333%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.seckill-bottom a {
+    display: block;
+    text-align: center;
+}
+.seckill-bottom a img {
+    width: 100%;
+    vertical-align: top;
+}
+.seckill-bottom a .cont {
+    position: relative;
+}
+.seckill-bottom a b {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #fdb60a;
+    color: #fff;
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.seckill-bottom a .new-price,
+.seckill-bottom a .old-price {
+    display: block;
+    margin-top: 3px;
+}
+.seckill-bottom a .new-price {
+    color: #c91523;
+    font-size: 14px;
+}
+.seckill-bottom a .old-price {
+    color: #666;
+    text-decoration: line-through;
+    font-size: 10px;
+}
+
+
+/*会场*/
+.meeting {
+    width: 100%;
+    position: relative;
+}
+.meeting>img {
+    width: 100%;
+    vertical-align: top;
+}
+.meeting ul {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+.meeting li {
+    width: 50%;
+    float: left;
+}
+.meeting a {
+    display: block;
+}
+.meeting a img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+
+/*热卖*/
+.hotsale {
+    width: 100%;
+    background-color: #fff;
+}
+.hotsale ul {
+    width: 100%;
+}
+.hotsale li {
+    width: 100%;
+    overflow: hidden;
+}
+.hotsale li a {
+    float: left;
+    width: 50%;
+}
+.hotsale li img {
+    width: 100%;
+    vertical-align: top;
+}
+.hotsale li:first-child a {
+    width: 33.33333%;
+}
+
+
+/*广告*/
+.advert {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.advert a {
+    display: block;
+}
+.advert img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/*超市*/
+.market {
+    width: 100%;
+    background-color: #fff;
+}
+.market h2,
+.theme h2,
+.brand h2 {
+    width: 100%;
+    padding: 0px 8px;
+    color: #f25353;
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+.market ul {
+    width: 100%;
+    overflow: hidden;
+}
+.market li {
+    float: left;
+    width: 50%;
+}
+.market li:nth-child(4) {
+    clear: both;
+}
+.market a {
+    display: block;
+    width: 100%;
+}
+.market img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/*主题*/
+.theme {
+    width: 100%;
+    background-color: #fff;
+}
+.theme ul {
+    width: 100%;
+}
+.theme li {
+    width: 100%;
+    overflow: hidden;
+}
+.theme li:first-child a {
+    width: 50%;
+}
+.theme li:first-child a:nth-child(3),
+.theme li:first-child a:nth-child(4) {
+    width: 25%;
+}
+.theme a {
+    float: left;
+    display: block;
+    width: 25%;
+}
+.theme img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/*品牌推荐*/
+.brand {
+    width: 100%;
+    background-color: #fff;
+}
+.brand ul {
+    width: 100%;
+    overflow: hidden;
+}
+.brand li {
+    float: left;
+    width: 30%;
+}
+.brand li:first-child {
+    width: 40%;
+}
+.brand li a {
+    display: block;
+    width: 100%;
+}
+.brand a img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/*猜你喜欢*/
+.guess {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+.guess .guess-top {
+    overflow: hidden;
+}
+.guess .guess-top h2 {
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    color: #7F7F7F;
+    line-height: 34px;
+}
+.guess .guess-top a {
+    position: relative;
+    float: right;
+    font-size: 12px;
+    line-height: 34px;
+    color: #c91523;
+    padding-right: 10px;
+}
+.guess .guess-top a::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -20px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../image/icon-login.png");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}
+.guess .guess-top a::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background-image: url("../image/icon-right.png");
+    background-repeat: no-repeat;
+    background-size: 4px 7px;
+}
+
+.guess-bottom {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.guess-bottom .item {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    margin: 10px 0 15px;
+    box-sizing: border-box;
+}
+.guess-bottom .item item-info {
+    display: block;
+    width: 100%;
+}
+.guess-bottom .item-info img {
+    width: 100%;
+    vertical-align: top;
+}
+.guess-bottom .item-info p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 13px;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 8px;
+}
+.item .price {
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+    margin-top: 5px;
+}
+.item .price span {
+    font-size: 12px;
+    color: #c91523;
+    line-height: 20px;
+}
+.item .price a {
+    float: right;
+    padding: 2px 4px;
+    font-size: 12px;
+    color: #999;
+    border: 1px solid #999;
+}
+
+
+
+/*点击加载更多*/
+.load-more {
+    width: 100%;
+}
+.load-more a {
+    display: block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/*底部部分*/
+footer {
+    width: 100%;
+}
+
+
+/*底部其他*/
+.extra {
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 0px;
+}
+.extra a {
+    display: inline-block;
+    padding: 0px 15px;
+    color: #999;
+    font-size: 14px;
+    border-right: 1px solid #848689;
+}
+.extra a:last-child {
+    border: none;
+}
+
+
+/*设备*/
+.device {
+    width: 100%;
+}
+.device ul {
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.device li {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+    padding: 10px 0;
+}
+.device li a {
+    display: inline-block;
+    width: 45px;
+    color: #999;
+}
+.device .client:before,
+.device .touch:before,
+.device .computer:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-image: url("../image/jd-sprites.png");
+    background-repeat:no-repeat;
+    background-size: 200px 200px;
+    background-position: -115px -65px;
+}
+.device .touch:before {
+    background-position: -35px -65px;
+}
+.device .computer:before {
+    background-position: -75px -65px;
+}
+
+
+/*版权部分*/
+.copyright {
+    width: 100%;
+}
+.copyright p {
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+
+
+
+/* 底部工具栏 */
+/* 底部工具栏  第一种：利用浮动来做*/
+/*.toolbar {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+}
+.toolbar ul {
+    width: 100%;
+    height: 100%;
+}
+.toolbar li {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.toolbar li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.toolbar li img {
+    height: 44px;
+    margin: 0 auto;
+}*/
+
+/* 底部工具栏  第二种： 利用flex伸缩布局来做*/
+.toolbar {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 100%;
+    height: 44px;
+    background-color: #fff;
+}
+.toolbar ul {
+    display: flex;
+}
+.toolbar li {
+    flex: 1;
+}
+.toolbar li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.toolbar li img {
+    vertical-align: top;
+    height: 44px;
+    margin: 0 auto;
+}
+

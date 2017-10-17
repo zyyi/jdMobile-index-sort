@@ -1,0 +1,167 @@
+.jd-sort {
+    width: 100%;
+}
+
+
+/*头部搜索*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    z-index: 999;
+    background-image: url("../image/header-bg.png");
+    background-size: 1px 44px;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+header .search-box {
+    width: 100%;
+    height: 45px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+header .search-box input {
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+}
+header .back-icon,
+header .menu-icon {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 44px;
+    padding: 10px 11px;
+    box-sizing: border-box;
+    background-image: url("../image/jd-sprites.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: -21px 2px;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+header .back-icon {
+    left: 0px;
+}
+header .menu-icon {
+    right: 0px;
+    background-position: -60px 2px;
+}
+
+
+
+main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+aside {
+    width: 90px;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+aside ul {
+    width: 100%;
+}
+aside ul li {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    font-size: 13px;
+}
+aside ul .active {
+    color: #c91523;
+    /*border-right: none;*/
+    border-right: 1px solid #fff;
+    background-color: #fff;
+}
+
+
+
+article {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+    background-color: #fff;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+/*热门推荐*/
+article .recommend {
+    width: 100%;
+}
+article .recommend h4 {
+    font-size: 13px;
+    color: #666;
+}
+.recommend ul {
+    overflow: hidden;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    margin-top: 15px;
+}
+.recommend ul li {
+    float: left;
+    width: 33.33333%;
+    height: 50px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50px;
+}
+.recommend ul li a {
+    display: block;
+}
+
+/*热门导购*/
+.guide {
+    width: 100%;
+    overflow: hidden;
+}
+.guide h4 {
+    font-size: 13px;
+    color: #666;
+    margin: 20px 0px 10px;
+}
+.guide ul {
+    width: 100%;
+    overflow: hidden;
+}
+.guide li {
+    float: left;
+    width: 33.33333%;
+    box-sizing: border-box;
+}
+.guide li a {
+    display: block;
+    padding: 2px;
+    text-align: center;
+}
+.guide a img {
+    width: 100%;
+    vertical-align: top;
+}
+.guide a p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+
